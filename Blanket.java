@@ -1,34 +1,32 @@
-class Blanket {
-    public static void main(String[] args) {
+class Blanket{
 
-        String material;
-        System.out.println("i am printing before Declaration of material:");
-        material = "Wool";
-        System.out.println(" i am printing after Initialization of material: " + material);
-
-        double length;
-        System.out.println(" i am printing before Declaration of length:");
-        length = 200.89;
-        System.out.println(" i am printing after Initialization of length: " + length);
-
-        float weight;
-        System.out.println(" i am printing before Declaration of weight:");
-        weight = 1.8f;
-        System.out.println(" i am printing after Initialization of weight: " + weight);
-
-        char sizeCode;
-        System.out.println("  i am printing before Declaration of sizeCode:");
-        sizeCode = 'L';
-        System.out.println(" i am printing after Initialization of sizeCode: " + sizeCode);
-
-        boolean isWashable;
-        System.out.println("i am printing before Declaration of isWashable:");
-        isWashable = true;
-        System.out.println(" i am printing after Initialization of isWashable: " + isWashable);
-
-        int price;
-        System.out.println(" i am printing before Declaration of price:");
-        price = 149;
-        System.out.println(" i am printing afterInitialization of price: " + price);
+    Blanket()
+	{
+        this("Wool");
+        System.out.println("constructor");
+    }
+	
+	
+    Blanket(String material){
+        this(material,1200);
+        System.out.println("blanket type");
+    }
+	
+    Blanket(String material,int price){
+        this(material,price,"Blue");
+        System.out.println("blanket colour");
+    }
+	
+    Blanket(String material,int price,String color){
+        this(material,price,color,2.5);
+        System.out.println("blanket aviable");
+    }
+	
+    Blanket(String material,int price,String color,double weight){
+        System.out.println(material);
+        System.out.println(price);
+        System.out.println(color);
+        System.out.println(weight);
+        System.out.println("%%%%%%%%%%%%%%%%%%");
     }
 }

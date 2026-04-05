@@ -1,39 +1,30 @@
 class Wheelchair {
 
-    public static void main(String[] args) {
+    Wheelchair() {
+        this("Steel");
+        System.out.println("constructor");
+    }
 
-        System.out.println("Hello Wheelchair");
-        startWheelchair();
+    Wheelchair(String material) {
+        this(material, 4500);
+        System.out.println(" two wheel chair");
+    }
 
-        System.out.println("Please add two wheel counts");
+    Wheelchair(String material, int price) {
+        this(material, price, true);
+        System.out.println("usefull");
+    }
 
-        int wheelFront = 2;
-        int wheelBack = 2;
-        String chairType = "Manual";
+    Wheelchair(String material, int price, boolean foldable) {
+        this(material, price, foldable, 4);
+        System.out.println("foldable wheel");
+    }
 
-        addWheels(wheelFront, wheelBack, chairType);
-
-        System.out.println("What is the wheelchair price");
-
-        double price = getWheelchairPrice();
+    Wheelchair(String material, int price, boolean foldable, int wheels) {
+        System.out.println(material);
         System.out.println(price);
-    }
-
-    static void startWheelchair() {
-        System.out.println("Wheelchair service started...");
-    }
-
-    static void addWheels(int num1, int num2, String type) {
-        System.out.println("Adding wheel numbers...");
-        int total = num1 + num2;
-        System.out.println(total);
-        System.out.println(type);
-    }
-
-    static double getWheelchairPrice() {
-        System.out.println("Checking wheelchair price...");
-        double price = 1200.50;
-        System.out.println("Price found");
-        return price;
+        System.out.println(foldable);
+        System.out.println(wheels);
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
 }
